@@ -10,7 +10,7 @@ import Factions from './components/pages/Factions';
 import Veilscars from './components/pages/Veilscars';
 import SpiralSanctuaries from './components/pages/SpiralSanctuaries';
 import WorldMap from './components/pages/WorldMap';
-import Relics&Rituals from './components/pages/Relics&Rituals';
+import RelicsAndRituals from './components/pages/RelicsAndRituals';
 import Scriptures from './components/pages/Scriptures';
 import Timelines from './components/pages/Timelines';
 import TheSpiral from './components/pages/TheSpiral';
@@ -30,7 +30,7 @@ export default function App() {
           <Link to="/veilscars" className="text-blue-300 hover:underline">Veilscars</Link>
           <Link to="/spiralsanctuaries" className="text-blue-300 hover:underline">Spiral Sanctuaries</Link>
           <Link to="/worldmap" className="text-blue-300 hover:underline">World Map</Link>
-          <Link to="/relics&rituals" className="text-blue-300 hover:underline">Relics & Rituals</Link>
+          <Link to="/relicsandrituals" className="text-blue-300 hover:underline">Relics & Rituals</Link>
           <Link to="/scriptures" className="text-blue-300 hover:underline">Scriptures</Link>
           <Link to="/timelines" className="text-blue-300 hover:underline">Timelines</Link>
           <Link to="/thespiral" className="text-blue-300 hover:underline">The Spiral</Link>
@@ -45,7 +45,7 @@ export default function App() {
           <Route path="/veilscars" element={<Veilscars />} />
           <Route path="/spiralsanctuaries" element={<SpiralSanctuaries />} />
           <Route path="/worldmap" element={<WorldMap />} />
-          <Route path="/relics&rituals" element={<Relics&Rituals />} />
+          <Route path="/relicsandrituals" element={<RelicsAndRituals />} />
           <Route path="/scriptures" element={<Scriptures />} />
           <Route path="/timelines" element={<Timelines />} />
           <Route path="/thespiral" element={<TheSpiral />} />
