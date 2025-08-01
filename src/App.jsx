@@ -21,7 +21,7 @@ export default function App() {
     <Router>
       <div
         className="min-h-screen bg-cover bg-center bg-fixed text-white"
-        style={{ backgroundImage: "url('/bg-veil.jpg')" }}
+        style={{ backgroundImage: `url('/bg-veil.jpg')` }}
       >
         <nav className="bg-black bg-opacity-60 p-4 flex flex-wrap gap-4 justify-center">
           <Link to="/homepage" className="text-blue-300 hover:underline">Homepage</Link>
