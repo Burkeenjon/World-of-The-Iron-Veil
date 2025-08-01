@@ -1,5 +1,5 @@
 // src/App.jsx
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Homepage from './components/pages/Homepage';
 import Cosmology from './components/pages/Cosmology';
@@ -17,13 +17,21 @@ import TheSpiral from './components/pages/TheSpiral';
 
 
 export default function App() {
+  const [fadeIn, setFadeIn] = useState(false);
+
+  useEffect(() => {
+    setFadeIn(true);
+  }, []);
+
   return (
     <Router>
       <div
-        className="min-h-screen bg-cover bg-center bg-fixed text-white"
-        style={{ backgroundImage: `url('/bg-veil.jpg')` }}
+        className={`min-h-screen bg-cover bg-center bg-fixed text-white transition-opacity duration-1000 ${
+          fadeIn ? 'opacity-100' : 'opacity-0'
+        }`}
+        style={{ backgroundImage: "url('/bg-veil.jpg')" }}
       >
-        <nav className="bg-black bg-opacity-60 p-4 flex flex-wrap gap-4 justify-center">
+        <nav className="bg-black bg-opacity-70 p-4 flex flex-wrap gap-4 justify-center shadow-md">
           <Link to="/homepage" className="text-blue-300 hover:underline">Homepage</Link>
           <Link to="/cosmology" className="text-blue-300 hover:underline">Cosmology</Link>
           <Link to="/glyphcraft" className="text-blue-300 hover:underline">Glyphcraft</Link>
@@ -38,8 +46,9 @@ export default function App() {
           <Link to="/timelines" className="text-blue-300 hover:underline">Timelines</Link>
           <Link to="/thespiral" className="text-blue-300 hover:underline">The Spiral</Link>
         </nav>
-        <Routes>
-          <Route path="/homepage" element={<Homepage />} />
+        <main className="p-6">
+          <Routes>
+            <Route path="/homepage" element={<Homepage />} />
           <Route path="/cosmology" element={<Cosmology />} />
           <Route path="/glyphcraft" element={<Glyphcraft />} />
           <Route path="/forbiddenglyphs" element={<ForbiddenGlyphs />} />
@@ -52,8 +61,9 @@ export default function App() {
           <Route path="/scriptures" element={<Scriptures />} />
           <Route path="/timelines" element={<Timelines />} />
           <Route path="/thespiral" element={<TheSpiral />} />
-          <Route path="/" element={<Homepage />} />
-        </Routes>
+            <Route path="/" element={<Homepage />} />
+          </Routes>
+        </main>
       </div>
     </Router>
   );
