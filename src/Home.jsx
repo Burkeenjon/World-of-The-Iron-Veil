@@ -2,8 +2,11 @@ import { motion } from "framer-motion";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-gradient-to-b from-gray-900 via-gray-800 to-black text-white p-4">
-      <section className="text-center py-12">
+    <main
+      className="min-h-screen bg-cover bg-center text-white p-4"
+      style={{ backgroundImage: 'url("/bg-veil.jpg")' }}
+    >
+      <section className="text-center py-12 bg-black/60 rounded-xl max-w-3xl mx-auto">
         <motion.h1
           className="text-4xl md:text-6xl font-bold mb-4"
           initial={{ opacity: 0, y: -20 }}
@@ -20,7 +23,7 @@ export default function Home() {
         </button>
       </section>
 
-      <section className="grid grid-cols-1 md:grid-cols-3 gap-6 py-12">
+      <section className="grid grid-cols-1 md:grid-cols-3 gap-6 py-12 bg-black/60 p-4 rounded-xl mt-10 max-w-6xl mx-auto">
         <div className="bg-gray-800 border border-gray-700 p-6 rounded-2xl shadow-md">
           <h2 className="text-2xl font-semibold mb-2">📜 World of the Veil</h2>
           <p className="text-gray-300">
