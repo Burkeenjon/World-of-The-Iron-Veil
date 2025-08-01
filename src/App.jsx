@@ -19,8 +19,11 @@ import TheSpiral from './components/pages/TheSpiral';
 export default function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-black text-white">
-        <nav className="bg-gray-800 p-4 flex flex-wrap gap-4 justify-center">
+      <div
+        className="min-h-screen bg-cover bg-center bg-fixed text-white"
+        style={ backgroundImage: "url('/bg-veil.jpg')" }
+      >
+        <nav className="bg-black bg-opacity-60 p-4 flex flex-wrap gap-4 justify-center">
           <Link to="/homepage" className="text-blue-300 hover:underline">Homepage</Link>
           <Link to="/cosmology" className="text-blue-300 hover:underline">Cosmology</Link>
           <Link to="/glyphcraft" className="text-blue-300 hover:underline">Glyphcraft</Link>
