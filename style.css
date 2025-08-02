@@ -1,0 +1,19 @@
+
+body {
+    margin: 0;
+    background-color: #f4f1ed;
+    font-family: 'Georgia', serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.menu-image {
+    max-width: 90%;
+    height: auto;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 12px rgba(0,0,0,0.2);
+}
