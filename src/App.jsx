@@ -1,5 +1,5 @@
 // src/App.jsx
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Homepage from './components/pages/Homepage';
 import Cosmology from './components/pages/Cosmology';
@@ -17,20 +17,9 @@ import TheSpiral from './components/pages/TheSpiral';
 
 
 export default function App() {
-  const [fadeIn, setFadeIn] = useState(false);
-
-  useEffect(() => {
-    setFadeIn(true);
-  }, []);
-
   return (
     <Router>
-      <div
-        className={`min-h-screen bg-cover bg-center bg-fixed text-white transition-opacity duration-1000 ${
-          fadeIn ? 'opacity-100' : 'opacity-0'
-        }`}
-        style={{ backgroundImage: "url('/bg-veil.jpg')" }}
-      >
+      <div className="min-h-screen bg-black text-white">
         <nav className="bg-black bg-opacity-70 p-4 flex flex-wrap gap-4 justify-center shadow-md">
           <Link to="/homepage" className="text-blue-300 hover:underline">Homepage</Link>
           <Link to="/cosmology" className="text-blue-300 hover:underline">Cosmology</Link>
